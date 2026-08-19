@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PhishSense AI Settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <h1>PhishSense AI Settings</h1>
+      <p>
+        Add your Gemini API key to enable AI scam analysis. The key is stored locally by the browser extension.
+      </p>
+
+      <label for="api-key">Gemini API key</label>
+      <input id="api-key" type="password" autocomplete="off" placeholder="AIza...">
+
+      <label for="model">Model</label>
+      <input id="model" type="text" value="gemini-3.5-flash">
+
+      <div class="actions">
+        <button id="save" type="button">Save settings</button>
+        <button id="clear" type="button" class="secondary">Clear key</button>
+      </div>
+
+      <p id="status" class="status" role="status"></p>
+
+      <section>
+        <h2>Privacy note</h2>
+        <p>
+          With AI enabled, the currently opened email text is sent to Gemini for analysis when you click scan.
+          For a production app, move the API key to a backend server instead of storing it in the extension.
+        </p>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

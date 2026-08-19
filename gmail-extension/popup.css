@@ -1,0 +1,36 @@
+body {
+  width: 260px;
+  margin: 0;
+  color: #f4f0ff;
+  background: #08070d;
+  font: 14px/1.45 Arial, sans-serif;
+}
+
+main {
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+p {
+  margin: 8px 0 0;
+}
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #4b168f;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.muted {
+  color: #b6a9d6;
+}

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "PhishSense for Gmail",
+  "version": "1.0.0",
+  "description": "Scans the currently opened Gmail message for common scam and spam red flags.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://mail.google.com/*", "https://generativelanguage.googleapis.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["classifier.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "PhishSense",
+    "default_popup": "popup.html"
+  }
+}

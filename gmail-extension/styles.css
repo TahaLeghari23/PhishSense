@@ -1,0 +1,164 @@
+#scamdetector-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 99999;
+  width: min(340px, calc(100vw - 36px));
+  max-height: min(560px, calc(100vh - 36px));
+  overflow: auto;
+  box-sizing: border-box;
+  color: #f4f0ff;
+  background: #08070d;
+  border: 1px solid #2c2540;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(8, 7, 13, 0.42);
+  font: 14px/1.45 Arial, sans-serif;
+}
+
+#scamdetector-panel * {
+  box-sizing: border-box;
+}
+
+.sd-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #2c2540;
+}
+
+.sd-header strong,
+.sd-header span {
+  display: block;
+}
+
+.sd-header span {
+  color: #b6a9d6;
+  font-size: 12px;
+}
+
+.sd-icon-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #4c3d72;
+  border-radius: 6px;
+  background: #15101f;
+  color: #e9ddff;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.sd-scan-button {
+  width: calc(100% - 28px);
+  margin: 14px 14px 8px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #4b168f;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sd-settings-button {
+  width: calc(100% - 28px);
+  margin: 0 14px 14px;
+  padding: 8px 12px;
+  border: 1px solid #4c3d72;
+  border-radius: 6px;
+  background: #12101a;
+  color: #d7c3ff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sd-scan-button:hover,
+.sd-icon-button:hover,
+.sd-settings-button:hover {
+  filter: brightness(0.96);
+}
+
+.sd-result {
+  margin: 0 14px 14px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #33284b;
+  background: #100d18;
+}
+
+.sd-result.safe {
+  border-color: #246b4d;
+  background: #0b1d17;
+}
+
+.sd-result.warning {
+  border-color: #8b6a1f;
+  background: #201806;
+}
+
+.sd-result.danger {
+  border-color: #8e2f45;
+  background: #211018;
+}
+
+.sd-result.muted {
+  color: #b6a9d6;
+}
+
+.sd-verdict {
+  color: #f8f5ff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.sd-confidence {
+  margin-top: 2px;
+  color: #c8bbdf;
+}
+
+.sd-section-label {
+  margin-top: 12px;
+  color: #d9ccf7;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sd-explanation {
+  margin: 8px 0 0;
+}
+
+.sd-ai-box {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(188, 163, 232, 0.28);
+}
+
+.sd-result ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.sd-partial {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(188, 163, 232, 0.28);
+}
+
+.sd-partial strong,
+.sd-partial span,
+.sd-partial small {
+  display: block;
+}
+
+.sd-partial small {
+  color: #b6a9d6;
+}
+
+#scamdetector-panel.sd-collapsed .sd-scan-button,
+#scamdetector-panel.sd-collapsed .sd-settings-button,
+#scamdetector-panel.sd-collapsed .sd-result {
+  display: none;
+}
